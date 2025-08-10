@@ -94,7 +94,7 @@
 
         layer_0 {
             bindings = <
-&td_QEC  &kp W  &kp E  &kp R  &kp T  &kp ESC  &kp JP_LPAREN  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp TAB  &kp JP_RPAREN  &kp H  &kp J  &kp K  &kp L  &td_CME  &ht LSHFT Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &td_CS  &td_DC  &ht RSHFT SLASH  &mt LALT CAPS  &lt 1 SPACE  &lt 3 DEL  &lt 4 BSPC  &lt 2 RET  &mt RGUI K_APP
+&td_QEC  &kp W  &kp E  &kp R  &kp T  &kp ESC  &kp PAGE_UP  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp TAB  &kp PAGE_DOWN  &kp H  &kp J  &kp K  &kp L  &td_CME  &ht LSHFT Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &td_CS  &td_DC  &ht RSHFT SLASH  &mt LALT CAPS  &lt 1 SPACE  &lt 3 DEL  &lt 4 BSPC  &lt 2 RET  &mt RGUI K_APP
             >;
         };
 
