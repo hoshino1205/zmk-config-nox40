@@ -39,6 +39,8 @@
     flavor = "tap-preferred";
 };
 
+&sl { release-after-ms = <250>; };
+
 / {
     behaviors {
         ht: my_hold_tap {
@@ -78,6 +80,67 @@
             tapping-term-ms = <150>;
             bindings = <&mt RCTRL MINUS>, <&kp JP_EQUAL>;
         };
+
+        scroll_up_down: scroll_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL_UP_DOWN";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <20>;
+        };
+
+        TdLeftThumb2: TdLeftThumb2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDLEFTTHUMB2";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&sk LEFT_CONTROL>, <&kp ESCAPE>;
+        };
+
+        TdTabOnQKey: TdTabOnQKey {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDTABONQKEY";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp Q>, <&kp TAB>;
+        };
+
+        MmLeftHome: MmLeftHome {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMLEFTHOME";
+            bindings = <&kp LEFT>, <&kp HOME>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        MmDownPD: MmDownPD {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMDOWNPD";
+            bindings = <&kp DOWN>, <&none>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        MmUpPU: MmUpPU {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMUPPU";
+            bindings = <&kp UP_ARROW>, <&kp PAGE_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        MmRightEnd: MmRightEnd {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMRIGHTEND";
+            bindings = <&kp RIGHT>, <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     combos {
@@ -86,6 +149,132 @@
         BS {
             bindings = <&kp LS(BACKSPACE)>;
             key-positions = <20 21>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <0 1>;
+        };
+
+        underscore {
+            bindings = <&kp LS(INTERNATIONAL_1)>;
+            key-positions = <8 9>;
+        };
+
+        hyphen {
+            bindings = <&kp MINUS>;
+            key-positions = <9 10>;
+        };
+
+        redo {
+            bindings = <&kp LC(Y)>;
+            key-positions = <27 28>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <14 15>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <13 14>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <26 27>;
+        };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <15 16>;
+        };
+
+        delete {
+            bindings = <&kp DEL>;
+            key-positions = <10 11>;
+        };
+
+        mb1-left {
+            bindings = <&mkp MB1>;
+            key-positions = <25 26 27>;
+        };
+
+        mb2 {
+            bindings = <&mkp MB2>;
+            key-positions = <21 22>;
+        };
+
+        MoveToPE {
+            bindings = <&kp LC(END)>;
+            key-positions = <30 31 32>;
+        };
+
+        MoveToPT {
+            bindings = <&kp LC(HOME)>;
+            key-positions = <20 21 22>;
+        };
+
+        CloseTab {
+            bindings = <&kp LG(W)>;
+            key-positions = <30 31 32 33>;
+        };
+
+        RedoTab {
+            bindings = <&kp LS(LG(T))>;
+            key-positions = <21 22 23 20>;
+        };
+    };
+
+    macros {
+        setphrase1: setphrase1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp LS(S) &kp H &kp O &kp W &kp A &kp N3 &kp N7 &kp N1 &kp N2 &kp N0 &kp N5>;
+            label = "SETPHRASE1";
+        };
+
+        setphrase2: setphrase2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp H &kp O &kp S &kp H &kp I &kp N &kp O &kp MINUS &kp T &kp A &kp K &kp E &kp S &kp H &kp I &kp LBKT &kp M &kp K &kp I &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
+            label = "SETPHRASE2";
+        };
+
+        setphrase3: setphrase3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp H &kp O &kp S &kp H &kp I &kp N &kp O &kp LBKT &kp P &kp T &kp U &kp N &kp E &kp D &kp DOT &kp N &kp E &kp T>;
+            label = "SETPHRASE3";
+        };
+
+        addquotechar: addquotechar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LANGUAGE_2 &kp GREATER_THAN &kp HOME &kp DOWN>;
+            label = "ADDQUOTECHAR";
+        };
+
+        AddParenthsis: AddParenthsis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp ASTERISK &kp NON_US_HASH &kp LEFT &kp LANGUAGE_1>;
+            label = "ADDPARENTHSIS";
+        };
+
+        AddBracket: AddBracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1 &kp RIGHT_BRACKET &kp NON_US_HASH &kp LEFT &kp LANGUAGE_1>;
+            label = "ADDBRACKET";
+        };
+
+        AddDoublequote: AddDoublequote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp AT &kp AT &kp LEFT &kp LANGUAGE_1>;
+            label = "ADDDOUBLEQUOTE";
         };
     };
 
