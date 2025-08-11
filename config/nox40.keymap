@@ -260,7 +260,7 @@
         AddParenthsis: AddParenthsis {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp ASTERISK &kp NON_US_HASH &kp LEFT &kp LANGUAGE_1>;
+            bindings = <&kp LANGUAGE_2 &kp ASTERISK &kp LEFT_PARENTHESIS &kp LEFT &kp LANGUAGE_1>;
             label = "ADDPARENTHSIS";
         };
 
@@ -277,6 +277,13 @@
             bindings = <&kp LANGUAGE_2 &kp AT &kp AT &kp LEFT &kp LANGUAGE_1>;
             label = "ADDDOUBLEQUOTE";
         };
+
+        setphrase4: setphrase4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp LS(T) &kp LS(T) &kp LS(T) &kp LS(T) &kp T &kp N4 &kp N7 &kp N4 &kp N4 &kp N7 &kp N7 &kp N3 &kp N0 &kp N9>;
+            label = "SETPHRASE4";
+        };
     };
 
     keymap {
@@ -284,37 +291,37 @@
 
         default_layer {
             bindings = <
-&TdTabOnQKey  &kp W  &kp E  &kp R  &kp T  &kp TAB  &kp PAGE_UP  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp ESC  &kp PAGE_DOWN  &kp H  &kp J  &kp K  &lt 3 L  &kp RET  &ht LSHFT Z  &mt LEFT_WIN X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp PERIOD  &ht RSHFT SLASH  &kp LALT  &TdLeftThumb2  &lt 1 DEL  &lt 2 SPACE  &lt 1 BACKSPACE  &lt 4 MINUS
+&TdTabOnQKey  &kp W  &kp E  &kp R  &kp T  &kp TAB  &kp PAGE_UP  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp ESC  &kp PAGE_DOWN  &kp H  &kp J  &kp K  &lt 3 L  &kp RET  &ht LSHFT Z  &mt LEFT_WIN X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp PERIOD  &ht RSHFT SLASH  &kp LALT  &TdLeftThumb2  &lt 2 DEL  &lt 3 SPACE  &lt 2 BACKSPACE  &lt 4 MINUS
             >;
         };
 
         SPECIALCHAR {
             bindings = <
-&kp EXCLAMATION  &kp AT  &kp EXCLAMATION  &kp HASH  &kp PLUS  &none  &none  &kp UNDER  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp LS(INTERNATIONAL_1)  &kp PERCENT  &kp LEFT_BRACKET  &kp AMPERSAND  &kp DOLLAR  &kp CARET  &kp LEFT_BRACE  &none  &none  &kp RIGHT_BRACKET  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp NON_US_HASH  &none  &trans  &kp DOUBLE_QUOTES  &kp EQUAL  &kp LS(INTERNATIONAL_3)  &kp INT3  &kp COLON  &kp MINUS  &kp COMMA  &kp PERIOD  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans
+&kp EXCLAMATION  &kp AT  &kp EXCLAMATION  &kp HASH  &kp PLUS  &none  &none  &kp UNDER  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp LS(INTERNATIONAL_1)  &kp PERCENT  &kp LEFT_BRACKET  &kp AMPERSAND  &kp DOLLAR  &kp CARET  &kp LEFT_BRACE  &none  &none  &kp RIGHT_BRACKET  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp NON_US_HASH  &none  &kp LEFT_SHIFT  &kp DOUBLE_QUOTES  &kp EQUAL  &kp LS(INTERNATIONAL_3)  &kp INT3  &kp COLON  &kp MINUS  &kp COMMA  &kp PERIOD  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        ARROW {
+        ARROW,BT {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &none  &none  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &out OUT_USB  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &MmLeftHome  &MmDownPD  &MmUpPU  &MmRightEnd  &none  &bt BT_CLR_ALL  &bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &none  &trans  &trans  &trans  &trans  &trans  &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &none  &none  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &out OUT_USB  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none  &bt BT_CLR_ALL  &bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &none  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        FUNCTION {
+        FUNC,MACRO {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none  &none  &setphrase1  &setphrase2  &setphrase3  &none  &none  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &none  &none  &kp LANGUAGE_2  &kp LANGUAGE_1  &addquotechar  &none  &none  &kp F11  &kp F12  &none  &none  &none  &AddParenthsis  &AddBracket  &AddDoublequote  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none  &none  &setphrase1  &setphrase2  &setphrase3  &setphrase4  &none  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &none  &none  &kp LANGUAGE_2  &kp LANGUAGE_1  &addquotechar  &none  &none  &kp F11  &kp F12  &none  &none  &none  &AddParenthsis  &AddBracket  &AddDoublequote  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        MOUSE {
+        MOUSE,BL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &none  &none  &trans  &none  &none  &none  &none  &trans  &trans  &trans  &trans  &trans  &none  &none  &none  &msc SCRL_DOWN  &mmv MOVE_UP  &msc SCRL_UP  &none  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
+&none  &none  &none  &none  &none  &bootloader  &bootloader  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &msc SCRL_DOWN  &mmv MOVE_UP  &msc SCRL_UP  &none  &none  &none  &none  &none  &none  &mkp LCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        BT {
+        BT_ORIGINAL {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &bt BT_CLR  &bt BT_CLR_ALL  &bt BT_CLR_ALL  &bt BT_CLR  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &bt BT_CLR  &bt BT_CLR_ALL  &bt BT_CLR_ALL  &bt BT_CLR  &none  &none  &none  &none  &bootloader  &none  &none  &none  &none  &none  &none  &none  &none  &bootloader  &none  &none  &none  &none  &none  &none
             >;
         };
     };
