@@ -148,8 +148,6 @@
             label = "TDCOMMA";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
-
-            tapping-term-ms = <180>;
         };
 
         TdPeriod: TdPeriod {
@@ -157,8 +155,6 @@
             label = "TDPERIOD";
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp SLASH>;
-
-            tapping-term-ms = <180>;
         };
     };
 
