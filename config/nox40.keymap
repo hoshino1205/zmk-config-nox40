@@ -142,6 +142,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
+
+        TdComma: TdComma {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDCOMMA";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+
+            tapping-term-ms = <180>;
+        };
+
+        TdPeriod: TdPeriod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDPERIOD";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp SLASH>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     combos {
@@ -291,7 +309,7 @@
 
         default_layer {
             bindings = <
-&TdTabOnQKey  &kp W  &kp E  &kp R  &kp T  &kp TAB  &msc SCRL_UP  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp ESC  &msc SCRL_DOWN  &kp H  &kp J  &kp K  &lt 3 L  &kp RET  &ht LSHFT Z  &mt LEFT_WIN X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp PERIOD  &ht RSHFT SLASH  &kp LALT  &TdLeftThumb2  &lt 1 DEL  &lt 2 SPACE  &lt 1 BACKSPACE  &lt 4 MINUS
+&TdTabOnQKey  &kp W  &kp E  &kp R  &kp T  &kp TAB  &msc SCRL_UP  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp ESC  &msc SCRL_DOWN  &kp H  &kp J  &kp K  &lt 3 L  &kp RET  &ht LSHFT Z  &mt LEFT_WIN X  &kp C  &kp V  &kp B  &kp N  &kp M  &TdComma  &TdPeriod  &ht RSHFT MINUS  &kp LALT  &TdLeftThumb2  &lt 1 DEL  &lt 2 SPACE  &lt 1 BACKSPACE  &lt 4 MINUS
             >;
         };
 
