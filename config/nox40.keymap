@@ -160,6 +160,13 @@
 
             tapping-term-ms = <300>;
         };
+
+        TdMinus: TdMinus {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDMINUS";
+            #binding-cells = <0>;
+            bindings = <&ht RIGHT_SHIFT MINUS>, <&kp LS(INTERNATIONAL_1)>;
+        };
     };
 
     combos {
@@ -244,11 +251,6 @@
             bindings = <&kp LS(LG(T))>;
             key-positions = <21 22 23 20>;
         };
-
-        underscore2 {
-            bindings = <&kp LS(INTERNATIONAL_1)>;
-            key-positions = <33 24>;
-        };
     };
 
     macros {
@@ -314,7 +316,7 @@
 
         default_layer {
             bindings = <
-&TdTabOnQKey  &kp W  &kp E  &kp R  &kp T  &kp TAB  &msc SCRL_UP  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp ESC  &msc SCRL_DOWN  &kp H  &kp J  &kp K  &lt 3 L  &kp RET  &ht LSHFT Z  &mt LEFT_WIN X  &kp C  &kp V  &kp B  &kp N  &kp M  &TdComma  &TdPeriod  &ht RSHFT MINUS  &kp LALT  &TdLeftThumb2  &lt 1 DEL  &lt 2 SPACE  &lt 1 BACKSPACE  &lt 4 MINUS
+&TdTabOnQKey  &kp W  &kp E  &kp R  &kp T  &kp TAB  &msc SCRL_UP  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp ESC  &msc SCRL_DOWN  &kp H  &kp J  &kp K  &lt 3 L  &kp RET  &ht LSHFT Z  &mt LEFT_WIN X  &kp C  &kp V  &kp B  &kp N  &kp M  &TdComma  &TdPeriod  &TdMinus  &kp LALT  &TdLeftThumb2  &lt 1 DEL  &lt 2 SPACE  &lt 1 BACKSPACE  &lt 4 MINUS
             >;
         };
 
