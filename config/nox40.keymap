@@ -184,7 +184,7 @@
         compatible = "zmk,combos";
 
         BS {
-            bindings = <&kp LS(BACKSPACE)>;
+            bindings = <&kp BACKSPACE>;
             key-positions = <20 21>;
         };
 
