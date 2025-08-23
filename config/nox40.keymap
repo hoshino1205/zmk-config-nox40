@@ -262,6 +262,16 @@
             bindings = <&kp LS(LG(T))>;
             key-positions = <21 22 23 20>;
         };
+
+        toBtLayer_R {
+            bindings = <&mo 5>;
+            key-positions = <37 38>;
+        };
+
+        toBtLayer_L {
+            bindings = <&mo 5>;
+            key-positions = <36 35>;
+        };
     };
 
     macros {
@@ -355,9 +365,9 @@
             >;
         };
 
-        BT_ORIGINAL {
+        BT {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &bt BT_CLR  &bt BT_CLR_ALL  &bt BT_CLR_ALL  &bt BT_CLR  &none  &none  &none  &none  &bootloader  &none  &none  &none  &none  &none  &none  &none  &none  &bootloader  &none  &none  &none  &none  &none  &none
+&none  &none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bootloader  &bootloader  &none  &none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &out OUT_USB  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &out OUT_USB  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &bt BT_CLR_ALL  &bt BT_CLR  &none  &none  &none  &bt BT_CLR_ALL  &bt BT_CLR  &none  &none  &none  &none  &none  &none  &none
             >;
         };
     };
