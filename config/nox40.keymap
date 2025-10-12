@@ -348,7 +348,7 @@
 
         SPECIALCHAR {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &none  &none  &kp COLON  &kp MINUS  &kp DOUBLE_QUOTES  &kp SLASH  &kp PERCENT  &kp F13  &kp F14  &kp F15  &kp F16  &kp F17  &none  &none  &kp RIGHT_BRACKET  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp NON_US_HASH  &none  &kp F18  &kp F19  &kp F20  &kp F21  &kp F22  &kp UNDER  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp LS(INTERNATIONAL_1)  &kp RIGHT_SHIFT  &trans  &trans  &trans  &trans  &trans  &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &none  &none  &kp COLON  &kp MINUS  &kp DOUBLE_QUOTES  &kp SLASH  &kp PERCENT  &out OUT_USB  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &kp RIGHT_BRACKET  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp NON_US_HASH  &none  &none  &none  &bt BT_CLR_ALL  &bt BT_CLR  &none  &kp UNDER  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp LS(INTERNATIONAL_1)  &kp RIGHT_SHIFT  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
