@@ -103,7 +103,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TDTABONWKEY";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&mt LEFT_CONTROL W>, <&kp TAB>;
         };
 
@@ -183,7 +183,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TDESCONQKEY";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&mt LEFT_CONTROL Q>, <&kp ESCAPE>;
         };
     };
