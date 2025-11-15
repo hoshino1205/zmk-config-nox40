@@ -104,7 +104,7 @@
             label = "TDTABONWKEY";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LEFT_CONTROL W>, <&kp TAB>;
+            bindings = <&kp W>, <&kp TAB>;
         };
 
         MmLeftHome: MmLeftHome {
@@ -184,7 +184,16 @@
             label = "TDESCONQKEY";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LEFT_CONTROL Q>, <&kp ESCAPE>;
+            bindings = <&kp Q>, <&kp ESCAPE>;
+        };
+
+        MmBSDel: MmBSDel {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMBSDEL";
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -350,7 +359,7 @@
 
         default_layer {
             bindings = <
-&TdEscOnQkey  &TdTabOnWKey  &kp E  &kp R  &kp T  &kp TAB  &msc SCRL_UP  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp ESC  &msc SCRL_DOWN  &kp H  &kp J  &kp K  &lt 3 L  &kp RET  &mt LSHFT Z  &mt LEFT_WIN X  &kp C  &kp V  &kp B  &kp N  &kp M  &TdComma  &TdPeriod  &MmMinus  &kp LALT  &mo 1  &mo 6  &lt 2 SPACE  &lt 2 SPACE  &lt 4 BACKSPACE
+&TdEscOnQkey  &TdTabOnWKey  &kp E  &kp R  &kp T  &kp ESCAPE  &MmBSDel  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp TAB  &MmMinus  &kp H  &kp J  &kp K  &lt 3 L  &kp RET  &mt LSHFT Z  &mt LEFT_WIN X  &kp C  &kp V  &kp B  &kp N  &kp M  &TdComma  &TdPeriod  &kp SLASH  &kp LALT  &mo 1  &lt 6 MINUS  &lt 2 SPACE  &lt 4 BACKSPACE  &kp LS(LG(NUMBER_4))
             >;
         };
 
