@@ -184,7 +184,7 @@
             label = "TDESCONQKEY";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp Q>, <&kp ESCAPE>;
+            bindings = <&mt LCTRL Q>, <&kp ESCAPE>;
         };
 
         MmBSDel: MmBSDel {
