@@ -195,6 +195,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        MmRightThumb: MmRightThumb {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMRIGHTTHUMB";
+            bindings = <&lt 4 BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -359,7 +368,7 @@
 
         default_layer {
             bindings = <
-&TdEscOnQkey  &TdTabOnWKey  &kp E  &kp R  &kp T  &kp ESCAPE  &MmBSDel  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp TAB  &MmMinus  &kp H  &kp J  &kp K  &lt 3 L  &kp RET  &mt LSHFT Z  &mt LEFT_WIN X  &kp C  &kp V  &kp B  &kp N  &kp M  &TdComma  &TdPeriod  &kp SLASH  &kp LALT  &mo 1  &lt 6 MINUS  &lt 2 SPACE  &lt 4 BACKSPACE  &kp LS(LG(NUMBER_4))
+&TdEscOnQkey  &TdTabOnWKey  &kp E  &kp R  &kp T  &kp ESCAPE  &MmBSDel  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp TAB  &MmMinus  &kp H  &kp J  &kp K  &lt 3 L  &kp RET  &mt LSHFT Z  &mt LEFT_WIN X  &kp C  &kp V  &kp B  &kp N  &kp M  &TdComma  &TdPeriod  &kp SLASH  &kp LALT  &mo 1  &lt 6 MINUS  &lt 2 SPACE  &MmRightThumb  &kp LS(LG(NUMBER_4))
             >;
         };
 
