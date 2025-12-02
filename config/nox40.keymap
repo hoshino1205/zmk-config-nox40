@@ -368,7 +368,7 @@
 
         default_layer {
             bindings = <
-&TdEscOnQkey  &TdTabOnWKey  &kp E  &kp R  &kp T  &kp ESCAPE  &MmBSDel  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp TAB  &MmMinus  &kp H  &kp J  &kp K  &lt 3 L  &kp RET  &mt LSHFT Z  &mt LEFT_WIN X  &kp C  &kp V  &kp B  &kp N  &kp M  &TdComma  &TdPeriod  &kp SLASH  &kp LALT  &mo 1  &lt 6 MINUS  &lt 2 SPACE  &MmRightThumb  &kp LS(LG(NUMBER_4))
+&TdEscOnQkey  &TdTabOnWKey  &kp E  &kp R  &kp T  &kp ESCAPE  &MmBSDel  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp TAB  &MmMinus  &kp H  &kp J  &kp K  &lt 3 L  &kp RET  &mt LSHFT Z  &mt LEFT_WIN X  &kp C  &kp V  &kp B  &kp N  &kp M  &TdComma  &TdPeriod  &kp SLASH  &kp LALT  &lt 6 DELETE  &lt 1 MINUS  &lt 2 SPACE  &MmRightThumb  &kp LS(LG(NUMBER_4))
             >;
         };
 
@@ -404,7 +404,7 @@
 
         TenKeys {
             bindings = <
-&trans  &trans  &kp KP_NUMLOCK  &kp KP_PLUS  &kp KP_MINUS  &trans  &trans  &kp KP_COMMA  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE  &trans  &trans  &trans  &kp KP_SLASH  &kp KP_MULTIPLY  &trans  &trans  &kp KP_DOT  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ENTER  &trans  &trans  &trans  &kp UNDER  &kp SINGLE_QUOTE  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &trans  &trans  &kp ASTRK  &kp LEFT_PARENTHESIS  &trans
+&trans  &trans  &kp KP_NUMLOCK  &kp KP_PLUS  &kp KP_MINUS  &trans  &trans  &kp KP_COMMA  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE  &trans  &trans  &trans  &kp KP_SLASH  &kp KP_MULTIPLY  &trans  &trans  &kp KP_DOT  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ENTER  &trans  &trans  &trans  &kp UNDER  &kp SINGLE_QUOTE  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &trans  &trans  &kp KP_N0  &trans  &trans
             >;
         };
     };
